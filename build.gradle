@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group 'io.githup.amrjlg'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+jar {
+    manifest {
+        attributes 'Manifest-Version': '1.0'
+        attributes 'Created-By': 'amrjlg'
+    }
+}
+
+
+//task zip(type:Zip, dependsOn:['clean', 'jar']){
+//    metadataCharset "UTF-8"
+//    extension "zip"
+//    into(project.name){
+//        from("bin/")
+//        into("lib"){
+//            from(configurations.compile)
+//            from('build/libs/')
+//        }
+//        into("config"){
+//            from("src/main/resources/")
+//        }
+//        into("webapp"){
+//            from("src/main/webapp")
+//        }
+//    }
+//}
